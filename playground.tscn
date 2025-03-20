@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://di8mxonwrbtc2"]
+[gd_scene load_steps=24 format=3 uid="uid://di8mxonwrbtc2"]
 
 [ext_resource type="PackedScene" uid="uid://bvmpauvasrgwh" path="res://Player/player.tscn" id="1_rupst"]
 [ext_resource type="Script" uid="uid://dob01cnhdea5c" path="res://Player/Scripts/player.gd" id="1_wt17y"]
 [ext_resource type="Texture2D" uid="uid://cpl3s78isl4tf" path="res://Player/Sprites/me_texture-Sheet-Sheet.png" id="2_wt17y"]
+[ext_resource type="Script" uid="uid://bsog01ivlmbh0" path="res://camera_2d.gd" id="4_is3ju"]
 
 [sub_resource type="Animation" id="Animation_btcbx"]
 length = 0.001
@@ -331,3 +332,13 @@ libraries = {
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
 position = Vector2(1, 2)
 shape = SubResource("CircleShape2D_m8u5f")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+position = Vector2(241, 129)
+process_callback = 0
+drag_left_margin = 0.4
+drag_top_margin = 0.4
+drag_right_margin = 0.4
+drag_bottom_margin = 0.4
+script = ExtResource("4_is3ju")
+player = NodePath("../Player")

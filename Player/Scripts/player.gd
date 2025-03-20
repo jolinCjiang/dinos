@@ -8,8 +8,6 @@ var state : String = "idle"
 @onready var animation_player : AnimationPlayer = $AnimationPlayer2
 @onready var sprite : Sprite2D = $Sprite2D2
 
-
-
  # called when node enters scene tree for the first time
 func _ready():
 	pass
